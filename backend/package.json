@@ -1,0 +1,14 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend of the PMX telemetry project",
+  "main": "server.js",
+  "scripts": {
+    "test": "test_server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.8.0"
+  }
+}

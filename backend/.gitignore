@@ -1,0 +1,20 @@
+/node_modules
+/sslcert/
+
+package-lock.json
+logs
+*.logs
+
+/build
+.npm
+.DS_Store
+
+.env
+.env.test
+.env.production
+
+# Vim 
+*~
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+tags
