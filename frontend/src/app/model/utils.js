@@ -58,8 +58,8 @@ function intersection(origObj, newObj) {
 function erase(origObj, obj) {
     // https://stackoverflow.com/questions/55700754/get-array-of-all-lodash-paths-of-object
     function getPaths(obj) {
-        transform(obj, (acc, v, k) => {
-            const keys = _.isObject(v) && !isEmpty(v) ? _.map(getPaths(v), sk => _.concat(k, ...sk)) : [[k]];
+        _.transform(obj, (acc, v, k) => {
+            const keys = _.isObject(v) && !_.isEmpty(v) ? _.map(getPaths(v), sk => _.concat(k, ...sk)) : [[k]];
             acc.push(...keys);
         }, []);
     }
@@ -68,6 +68,7 @@ function erase(origObj, obj) {
     return _.unset(origObj, paths);
 }
 
-const merge = _.merge
+const merge = _.merge;
+const clone = _.clone;
 
-export { difference, merge, intersection, erase };
+export { difference, merge, intersection, erase, clone };
